@@ -4,10 +4,10 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'my_project');
+set('application', '/var/www/deployer/');
 
 // Project repository
-set('repository', 'https://github.com/treinaweb/treinaweb-projeto-sistema-administrativo-revenda-laravel.git');
+set('repository', 'https://github.com/treinaweb/treinaweb-direto-ao-ponto-deployer');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
@@ -22,8 +22,8 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
+host('root@s.eltonfonseca.dev')
+    ->set('deploy_path', '{{application}}');    
     
 // Tasks
 
